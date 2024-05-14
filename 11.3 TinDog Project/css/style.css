@@ -26,3 +26,23 @@
   height: 100px;
   border-radius: 50%;
 }
+
+.image-dog {
+  border-radius: 50%;
+}
+
+.features {
+  margin-top: 5px;
+}
+
+.py-5 {
+  text-align: center;
+}
+
+footer {
+  border: none;
+}
+
+.footer-container {
+  
+}
