@@ -1,3 +1,4 @@
+
 /*
 var name = prompt("what is your name?");
 var firstChar = name.slice(0, 1);
@@ -29,7 +30,24 @@ function lifeInWeeks(age) {
   /*************Don't change the code below**********/
 //}
 
-function bmiCalculator(weight, height) {
+/*function bmiCalculator(weight, height) {
   var bmi = weight / (height * height);
-  return bmi;
+  return Math.round(bmi);
 };
+
+var bmi = bmiCalculator(65, 1.8);
+
+console.log(bmi);
+*/
+
+/*
+var n = Math.random();
+n = Math.floor(n * 6) + 1;
+console.log(n);
+*/
+
+prompt("what is your name?");
+prompt("what is your favorite person name?");
+var n = Math.random();
+n = Math.floor(n * 100) + 1;
+alert(n + " %")
