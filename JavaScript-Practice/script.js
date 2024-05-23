@@ -45,9 +45,26 @@ var n = Math.random();
 n = Math.floor(n * 6) + 1;
 console.log(n);
 */
-
+/*
 prompt("what is your name?");
 prompt("what is your favorite person name?");
 var n = Math.random();
 n = Math.floor(n * 100) + 1;
 alert(n + " %")
+*/
+
+function bmiCalculator(weight, height) {
+    var bmi = weight / (height * height);
+    bmi = Math.round(bmi);
+
+    if (bmi < 18.5) {
+        return "Your BMI is " + bmi + ", so you are underweight.";
+    } else if (bmi >= 18.5 && bmi <= 24.9) {
+        return "Your BMI is " + bmi + ", so you have a normal weight.";
+    } else {
+        return "Your BMI is " + bmi + ", so you are overweight.";
+    }
+}
+
+// Example usage:
+console.log(bmiCalculator(70, 1.75)); // Output will depend on the input values
