@@ -53,7 +53,7 @@ n = Math.floor(n * 100) + 1;
 alert(n + " %")
 */
 
-function bmiCalculator(weight, height) {
+/*function bmiCalculator(weight, height) {
     var bmi = weight / (height * height);
     bmi = Math.round(bmi);
 
@@ -68,3 +68,16 @@ function bmiCalculator(weight, height) {
 
 // Example usage:
 console.log(bmiCalculator(70, 1.75)); // Output will depend on the input values
+*/
+
+function isLeap(year) {
+  if ((year % 4 === 0 && year % 100 !==0) || year % 400 === 0) {
+    return "Leap year."; //leap year
+}  else {
+    return "Not leap year."; //Not a leap year
+}
+}
+
+
+console.log(isLeap(2400));
+console.log(isLeap(1989));
