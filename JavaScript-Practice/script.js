@@ -70,6 +70,7 @@ alert(n + " %")
 console.log(bmiCalculator(70, 1.75)); // Output will depend on the input values
 */
 
+/*
 function isLeap(year) {
   if ((year % 4 === 0 && year % 100 !==0) || year % 400 === 0) {
     return "Leap year."; //leap year
@@ -81,3 +82,14 @@ function isLeap(year) {
 
 console.log(isLeap(2400));
 console.log(isLeap(1989));
+*/
+
+
+var guestList = ["Angela", "Koki", "Natsumi", "Cona"];
+var guestName = prompt("what is your name?");
+
+if (guestList.includes(guestName)) {
+  alert("welcome");
+} else {
+  alert("Sorry, next time");
+}
