@@ -84,7 +84,7 @@ console.log(isLeap(2400));
 console.log(isLeap(1989));
 */
 
-
+/*
 var guestList = ["Angela", "Koki", "Natsumi", "Cona"];
 var guestName = prompt("what is your name?");
 
@@ -93,3 +93,44 @@ if (guestList.includes(guestName)) {
 } else {
   alert("Sorry, next time");
 }
+*/
+
+var output = [];
+var count = 1;
+function fizzBuzz() {
+   if (count % 3 === 0 && count % 5 === 0){
+    output.push("FizzBuzz");
+  }
+    else if (count % 3 === 0) {
+    output.push("Fizz"); 
+  } else if (count % 5 === 0) {
+    output.push("Buzz"); 
+  } else {
+    output.push(count);
+  }
+  count++;
+  console.log(output);
+}
+
+
+fizzBuzz();
+fizzBuzz();
+fizzBuzz();
+fizzBuzz();
+fizzBuzz();
+fizzBuzz();
+fizzBuzz();
+fizzBuzz();
+fizzBuzz();
+fizzBuzz();
+fizzBuzz();
+fizzBuzz();
+fizzBuzz();
+fizzBuzz();
+fizzBuzz();
+fizzBuzz();
+fizzBuzz();
+fizzBuzz();
+fizzBuzz();
+fizzBuzz();
+
