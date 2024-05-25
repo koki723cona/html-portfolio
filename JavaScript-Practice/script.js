@@ -95,6 +95,7 @@ if (guestList.includes(guestName)) {
 }
 */
 
+/*
 var output = [];
 var count = 1;
 function fizzBuzz() {
@@ -133,4 +134,24 @@ fizzBuzz();
 fizzBuzz();
 fizzBuzz();
 fizzBuzz();
+*/
 
+function whoBuysLunch(names) {
+    // Get the length of the names array
+    var numberOfPeople = names.length;
+    
+    // Generate a random index between 0 and numNames - 1
+    var randomPersonPositon = Math.floor(Math.random() * numberOfPeople);
+    
+    // Select the random name from the array
+    var selectedName = names[randomPersonPositon];
+    
+    // Construct the output string
+    return selectedName + " is going to buy lunch today!";
+    
+}
+
+// Example usage:
+var names = ["Angela", "Ben", "Jenny", "Michael", "Chloe"];
+var result = whoBuysLunch(names);
+console.log(result); // Output will be similar to "Michael is going to buy lunch today!"
