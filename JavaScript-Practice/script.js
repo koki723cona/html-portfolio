@@ -99,6 +99,9 @@ if (guestList.includes(guestName)) {
 var output = [];
 var count = 1;
 function fizzBuzz() {
+
+   while(count <= 100) {
+
    if (count % 3 === 0 && count % 5 === 0){
     output.push("FizzBuzz");
   }
@@ -110,32 +113,14 @@ function fizzBuzz() {
     output.push(count);
   }
   count++;
+
+}
   console.log(output);
 }
 
-
-fizzBuzz();
-fizzBuzz();
-fizzBuzz();
-fizzBuzz();
-fizzBuzz();
-fizzBuzz();
-fizzBuzz();
-fizzBuzz();
-fizzBuzz();
-fizzBuzz();
-fizzBuzz();
-fizzBuzz();
-fizzBuzz();
-fizzBuzz();
-fizzBuzz();
-fizzBuzz();
-fizzBuzz();
-fizzBuzz();
-fizzBuzz();
 fizzBuzz();
 */
-
+/*
 function whoBuysLunch(names) {
     // Get the length of the names array
     var numberOfPeople = names.length;
@@ -155,3 +140,46 @@ function whoBuysLunch(names) {
 var names = ["Angela", "Ben", "Jenny", "Michael", "Chloe"];
 var result = whoBuysLunch(names);
 console.log(result); // Output will be similar to "Michael is going to buy lunch today!"
+*/
+/*
+var output = [];
+
+function fizzBuzz() {
+  for (var count = 100; count >= 1; count--) {
+    if (count % 3 === 0 && count % 5 === 0) {
+      output.push("FizzBuzz");
+    } else if (count % 3 === 0) {
+      output.push("Fizz");
+    } else if (count % 5 === 0) {
+      output.push("Buzz");
+    } else {
+      output.push(count);
+    }
+  }
+  console.log(output);
+}
+
+fizzBuzz();
+*/
+
+function fibonacciGenerator (n) {
+
+  var output = [];
+  if (n === 1) {
+    output = [0];
+  } else if (n === 2) {
+    output = [0,1];
+  } else {
+    output = [0,1 ,1, 2];
+
+    for (var i = 2; i < n; i++) {
+       output.push(output[output.length - 2] + output[output.length - 1]);
+    }
+    output.push(output[output.length - 2] + output[output.length - 1]);
+  
+  }
+  return output;
+};
+
+output = fibonacciGenerator();
+console.log(output);
