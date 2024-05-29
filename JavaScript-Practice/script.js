@@ -161,7 +161,7 @@ function fizzBuzz() {
 
 fizzBuzz();
 */
-
+/*
 function fibonacciGenerator (n) {
 
   var output = [];
@@ -183,3 +183,4 @@ function fibonacciGenerator (n) {
 
 output = fibonacciGenerator();
 console.log(output);
+*/
