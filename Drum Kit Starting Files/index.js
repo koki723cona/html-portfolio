@@ -1,3 +1,4 @@
+//Detecting Button Press
 var numberOfDrumButtons = document.querySelectorAll(".drum").length;
 
 for (var i = 0; i<numberOfDrumButtons; i++) {
@@ -6,7 +7,23 @@ for (var i = 0; i<numberOfDrumButtons; i++) {
    //this.style.color = "white";
     var buttonInnerHTML = this.innerHTML;
 
-   switch (buttonInnerHTML) {
+    makeSound(buttonInnerHTML);
+
+    buttonAnimation(buttonInnerHTML);
+
+   
+  });
+}
+//Detecting Keyboard Press
+document.addEventListener("keypress", function(event) {
+  //console.log(event);
+  makeSound(event.key);
+
+  buttonAnimation(event.key);
+});
+
+function makeSound(key) {
+  switch (key) {
      case "w":
        var crash = new Audio("sounds/crash.mp3");
        crash.play();
@@ -46,10 +63,50 @@ for (var i = 0; i<numberOfDrumButtons; i++) {
      default:console.log(buttonInnerHTML);
        
    }
-  });
 }
 
 
+function buttonAnimation(currentKey){
+
+  var activeButton = document.querySelector("." + currentKey);
+
+  activeButton.classList.add("pressed");
+
+  setTimeout(function (){
+    activeButton.classList.remove("pressed");
+  },100);
+  
+}
+/*
+  var houseKeeper1 = {
+  name: "Tina",
+  age: 24,
+  hasWorkPermit: true,
+  yearsOfExperience: 6,
+  languege:["Japanese", "English"]
+}
+*/
+
+//Constructor Function
+
+/*function HouseKeeper (name, age, hasWorkPermit, yearsOfExperience, languages){
+
+  this.name = name;
+  this.age = age;
+  this.hasWorkPermit = hasWorkPermit;
+  this.yearsOfExperience = yearsOfExperience;
+  this.languages = languages;
+  this.clean = function () {
+    alert("Cleaning in progress...");
+  }
+}
+*/
+
+/*
+  var houseKeeper1 = new HouseKeeper("Tina", 25, true, 6, ["Japanese", "English"]);
+
+  console.log(houseKeeper1.name);
+/*
  //var audio = new Audio("sounds/tom-1.mp3");
  //audio.play();
 
