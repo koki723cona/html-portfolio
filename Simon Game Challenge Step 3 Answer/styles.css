@@ -51,8 +51,3 @@ body {
   box-shadow: 0 0 20px white;
   background-color: grey;
 }
-
-.flash {
-  background-color: white;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 1);
-}
