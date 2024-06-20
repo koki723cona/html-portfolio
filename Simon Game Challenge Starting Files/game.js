@@ -1,6 +1,7 @@
+var buttonColours = ["red", "blue", "green", "yellow"];
+
 var gamePattern = [];
 var userClickedPattern = [];
-var buttonColours = ["red", "blue", "green", "yellow"];
 var started = false;
 var level = 0;
 
@@ -13,6 +14,18 @@ $(document).keydown(function () {
     started = true;
   }
 });
+
+
+  $(".btn").click(function () {
+    var userChosenColour = $(this).attr("id");
+    userClickedPattern.push(userChosenColour);
+
+    playSound(userChosenColour);
+    animatePress(userChosenColour);
+
+    // Log the userClickedPattern to the console
+    console.log(userClickedPattern);
+  });
 
 function nextSequence() {
   userClickedPattern = []; // Reset userClickedPattern at the start of each level
@@ -45,15 +58,5 @@ function animatePress(currentColour) {
 }
 
 // Detect when any button is clicked and trigger a handler function
-$(".btn").click(function () {
-  var userChosenColour = $(this).attr("id");
-  userClickedPattern.push(userChosenColour);
 
-  playSound(userChosenColour);
-  animatePress(userChosenColour);
-
-  // Log the userClickedPattern to the console
-  console.log(userClickedPattern);
-});
-
-nextSequence();
+//nextSequence();
