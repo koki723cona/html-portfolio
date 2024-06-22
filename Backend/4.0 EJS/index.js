@@ -8,8 +8,8 @@ app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
   const today = new Date();
-  const day = today.getDate();
-  let advice;
+  const day = today.getDay();
+  let advice = "";
 
   if (day === 0 || day === 6) {
     advice = "Hey! It's the weekend, it's time to have fun!"
@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
     advice = "Hey! It's the weekday, it's time to work hard!";
   }
 
-   res.render("index", { advice: advice });
+   res.render("index.ejs", { advice });
 })
 
 app.listen(port, () => {
