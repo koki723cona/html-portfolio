@@ -9,7 +9,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Set the view engine to ejs
 app.set("view engine", "ejs");
 
-
 // Serve the form
 app.get("/", (req, res) => {
   res.render("index.ejs")
